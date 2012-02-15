@@ -1,3 +1,3 @@
-from collection import Collection
-from resource import Resource
-from api import Api
+from resource import *
+from collection import *
+from api import *

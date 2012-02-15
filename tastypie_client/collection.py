@@ -1,7 +1,9 @@
 
 import simplejson as json
 from httplib2 import Http
-from urlparse import urljoin
+
+from tastypie_client import Resource
+from tastypie_client.url import urljoin
 
 class Collection(object):
     def __init__(self, url, schema_url = None):
@@ -10,10 +12,11 @@ class Collection(object):
 
     def get_all(self):
         response, content = Http().request(self.url)
-        return json.loads(content)['objects']
+        for obj in json.loads(content)['objects']:
+            yield Resource(url = urljoin(self.url, obj['resource_uri']), fields = obj)
         
     def get(self, id):
-        return None
+        return Resource(urljoin(self.url, id))
         
     def put(self, id, value):
         return None
