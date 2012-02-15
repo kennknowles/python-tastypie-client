@@ -5,6 +5,7 @@ This is a client library for fluidly working with a Django [Tastypie](https://gi
 It is _very_ preliminary.
 
 This library is somewhat analogous to Backbone.js, but with important differences:
+
  * Python :-)
  * The client is generated from the tastypie schema.
  * The API is instantiated with a base URL and relative links are automatically followed.
