@@ -1,14 +1,17 @@
 Django Tastypie Client
 ======================
 
-This is a client library for fluidly working with a Django Tastypie REST API.
+This is a client library for fluidly working with a Django [Tastypie](https://github.com/toastdriven/django-tastypie) REST API.
+It is _very_ preliminary.
 
-Key Features:
- - From the root URL of the API, downloads the schema and discovers all resources.
- - From any resource, discovers and can seamlessly follow fields that are references to other objects.
+This library is somewhat analogous to Backbone.js, but with important differences:
+ - Python :-)
+ - The client is generated from the tastypie schema.
+ - The API is instantiated with a base URL and relative links are automatically followed.
 
 In other words, it is a "web crawler" but instead of HTML and hrefs, it handles the much-simpler case 
-of JSON with pointers implemented as URLs.
+of JSON with pointers implemented as URLs, and undestands the particular schema flavor included in 
+Tastypie.
 
 Contributors
 ------------
