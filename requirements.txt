@@ -1,0 +1,4 @@
+httplib2==0.7.2
+lazypy==0.5
+simplejson==2.3.2
+wsgiref==0.1.2
